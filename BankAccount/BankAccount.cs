@@ -50,6 +50,7 @@ namespace BankAccount
             {
                 throw new ArgumentOutOfRangeException("amount can't be below zero");
             }
+
             if (amount == 0)
             {
                 throw new ArgumentOutOfRangeException("amount can't be zero");
