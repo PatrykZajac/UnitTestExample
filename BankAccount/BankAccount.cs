@@ -28,12 +28,17 @@ namespace BankAccount
         {
             if (amount > m_balance)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount can't be above balance");
             }
 
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount can't be below zero");
+            }
+
+            if (amount == 0)
+            {
+                throw new ArgumentOutOfRangeException("amount can't be zero");
             }
 
             m_balance -= amount;
@@ -43,7 +48,11 @@ namespace BankAccount
         {
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount can't be below zero");
+            }
+            if (amount == 0)
+            {
+                throw new ArgumentOutOfRangeException("amount can't be zero");
             }
 
             m_balance += amount;

@@ -11,10 +11,18 @@ namespace BankAccountTest
         }
 
         [Fact]
+        public void Credit_WithValidAmount_UpdatesBalance()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Fact]
         public void Debit_WithValidAmount_UpdatesBalance()
         {
             throw new NotImplementedException();
         }
+
+        
 
         [Fact]
         public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
