@@ -1,7 +1,7 @@
 ﻿using System;
 namespace BankAccount
 {
-    public class BankAccount
+    public class BankAccount : IBankAccount
     {
         private readonly string m_customerName;
         private double m_balance;
@@ -17,11 +17,6 @@ namespace BankAccount
         public string CustomerName
         {
             get { return m_customerName; }
-        }
-
-        public double Balance
-        {
-            get { return m_balance; }
         }
 
         public void Debit(double amount)
@@ -57,6 +52,11 @@ namespace BankAccount
             }
 
             m_balance += amount;
+        }
+
+        public double Balance
+        {
+            get { return m_balance; }
         }
     }
 }

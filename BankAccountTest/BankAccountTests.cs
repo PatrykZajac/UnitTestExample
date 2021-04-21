@@ -23,7 +23,19 @@ namespace BankAccountTest
         }
 
         [Fact]
+        public void Credit_WhenAmountIsLessThenZero_ShouldThrowArgumentOutOfRange()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Fact]
         public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Fact]
+        public void Credit_WhenAmountIsZero_ShouldThrowArgumentOutOfRange()
         {
             throw new NotImplementedException();
         }
@@ -40,16 +52,5 @@ namespace BankAccountTest
             throw new NotImplementedException();
         }
 
-        [Fact]
-        public void Credit_WhenAmountIsLessThenZero_ShouldThrowArgumentOutOfRange()
-        {
-            throw new NotImplementedException();
-        }
-
-        [Fact]
-        public void Credit_WhenAmountIsZero_ShouldThrowArgumentOutOfRange()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
