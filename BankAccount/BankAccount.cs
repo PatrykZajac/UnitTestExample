@@ -8,7 +8,7 @@ namespace BankAccount
 
         private BankAccount() { }
 
-        public BankAccount(string customerName, double balance)
+        public BankAccount(string customerName, double balance = 0d)
         {
             m_customerName = customerName;
             m_balance = balance;

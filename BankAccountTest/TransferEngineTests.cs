@@ -48,15 +48,23 @@ namespace BankAccountTest
         [Fact]
         public void Check_If_Credit_And_Debit_Functions_Are_Used_On_Proper_Account()
         {
-            //(_transferEngine.DebitAccount as FakeBankAccount)
-            throw new NotImplementedException();
+            _transferEngine.TransferMoney(10);
+            Assert.Equal(0, (_transferEngine.DebitAccount as FakeBankAccount).CreditCounter);
+            Assert.Equal(1, (_transferEngine.CreditAccount as FakeBankAccount).CreditCounter);
+            Assert.Equal(1, (_transferEngine.DebitAccount as FakeBankAccount).DebitCounter);
+            Assert.Equal(0, (_transferEngine.CreditAccount as FakeBankAccount).DebitCounter);
+            //(_transferEngine.DebitAccount as FakeBankAccount).CreditCounter
         }
 
 
         [Fact]
         public void Check_Balance_After_Operation()
         {
-            throw new NotImplementedException();
+            var result = _transferEngine.TransferMoney(10);
+            Assert.Equal(90d, result.Item1);
+            Assert.Equal(10d, result.Item2);
+            //var item = (double, double)
+            //item.Item1, item.Item2;
         }
 
     }
